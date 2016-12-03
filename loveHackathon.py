@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello World!'
+    return 'Hello World! <a href="/register">Register</a> or <a href="/login">Login</a>'
 
 @app.route('/home')
 def home():
@@ -22,6 +22,23 @@ def login():
         else:
             return redirect(url_for('home'))
     return render_template('login.html', error=error)
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    error = None
+    if request.method == 'POST':
+        needed_info = ['username', 'password', 'sex', 'fullAge', 'partner']
+        found_required_info = True
+        for info in needed_info:
+            if info not in request.form:
+                found_required_info = False
+        if found_required_info:
+            # go on with the questions
+            pass
+        else:
+            return redirect(url_for('register'))
+    return render_template('register.html', error=error)
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',debug=True)
