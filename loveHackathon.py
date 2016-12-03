@@ -7,10 +7,9 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/home')
 def home():
-    if 'username' in session:
-        return render_template_string('##Home {{name}}', name='admin')
-    else:    
-        return render_template_string('#Home {{name}}', name='admin')
+    if 'username' not in session:
+        return render_template_string('<a href="/login">Login</a> or <a href="/register">Register</a>')
+    return render_template_string('Home {{name}}', name=session['username'])
 
 # route for handling the login page logic
 @app.route('/login', methods=['GET', 'POST'])
