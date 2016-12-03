@@ -159,11 +159,33 @@ div.level-section div.challenge {
 	text-align: center;
 }
 
+div.level-section div.challenge-detail {
+    width: 80%;
+    background: #fff;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+}
+
 div.level-section h1 {
 	font-family: montserrat;
 	font-size: 60px;
 }
 
+h2 {
+    font-family: montserrat;
+    font-size: 40px;
+}
+
+img.challenge-image {
+    width: 200px;
+    height: 200px
+}
+
 img.challenge-rating {
 	width: 45%;
+}
+
+img.challenge-rating-small {
+    width: 100px;
 }
