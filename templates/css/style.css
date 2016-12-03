@@ -165,7 +165,7 @@ div.level-section div.challenge-detail {
     background: #fff;
     border-radius: 4px;
     padding: 20px;
-    text-align: left;
+    text-align: center;
     margin-bottom: 30px;
 }
 
@@ -184,6 +184,11 @@ img.challenge-image {
     height: 200px;
 }
 
+.challenge-detail img.challenge-image {
+    width: 400px;
+    height: 400px;
+}
+
 img.challenge-image-trs {
     width: 200px;
     height: 200px;
@@ -192,7 +197,7 @@ img.challenge-image-trs {
 
 img.logo {
     /*width: 200px;*/
-    height: 80px
+    height: 120px
 }
 
 img.challenge-rating {
