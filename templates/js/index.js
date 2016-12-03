@@ -78,5 +78,5 @@ $(".previous").click(function(){
 });
 
 $(".submit").click(function(){
-	return false;
+   window.location.href='home.html';
 })
